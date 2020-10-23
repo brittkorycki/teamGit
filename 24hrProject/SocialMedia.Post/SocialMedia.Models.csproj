@@ -7,8 +7,8 @@
     <ProjectGuid>{44761ECB-21A0-41E3-AD1A-59F6FEDE7B1F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SocialMedia.Post</RootNamespace>
-    <AssemblyName>SocialMedia.Post</AssemblyName>
+    <RootNamespace>SocialMedia.Models</RootNamespace>
+    <AssemblyName>SocialMedia.Models</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -102,20 +102,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\24hrProject\24hrProject.csproj">
-      <Project>{77849d44-0577-404d-80bd-28ca8d20ddb0}</Project>
-      <Name>24hrProject</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SocialMedia.Data\SocialMedia.Data.csproj">
-      <Project>{e1d947ba-882a-491c-8854-59a72f69230f}</Project>
-      <Name>SocialMedia.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SocialMedia.Services\SocialMedia.Services.csproj">
-      <Project>{be8c7abc-1759-47dc-8543-fe01bb154bd0}</Project>
-      <Name>SocialMedia.Services</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

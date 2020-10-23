@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SocialMedia.Post
+namespace SocialMedia.Models
 {
     public class User
     {

@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using SocialMedia.Data;
+using SocialMedia.Post;
 
 namespace SocialMedia.Data
 {

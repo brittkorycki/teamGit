@@ -206,6 +206,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -308,9 +309,13 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SocialMedia.Data\SocialMedia.Data.csproj">
-      <Project>{e1d947ba-882a-491c-8854-59a72f69230f}</Project>
-      <Name>SocialMedia.Data</Name>
+    <ProjectReference Include="..\SocialMedia.Post\SocialMedia.Models.csproj">
+      <Project>{44761ECB-21A0-41E3-AD1A-59F6FEDE7B1F}</Project>
+      <Name>SocialMedia.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocialMedia.Services\SocialMedia.Services.csproj">
+      <Project>{BE8C7ABC-1759-47DC-8543-FE01BB154BD0}</Project>
+      <Name>SocialMedia.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
