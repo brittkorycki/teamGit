@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommentService.cs" />
     <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,10 +93,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\24hrProject\24hrProject.csproj">
-      <Project>{77849d44-0577-404d-80bd-28ca8d20ddb0}</Project>
-      <Name>24hrProject</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SocialMedia.Data\SocialMedia.Data.csproj">
       <Project>{e1d947ba-882a-491c-8854-59a72f69230f}</Project>
       <Name>SocialMedia.Data</Name>
