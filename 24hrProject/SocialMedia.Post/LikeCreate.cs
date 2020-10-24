@@ -11,5 +11,6 @@ namespace SocialMedia.Models
     {
         public Post LikedPost { get; set; }
         public User Liker { get; set; }
+        public Post LikedUser { get; set; }
     }
 }
