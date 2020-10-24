@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using _24hrProject.Models;
+using SocialMedia.Data;
 
 namespace _24hrProject
 {

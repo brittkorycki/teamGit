@@ -3,9 +3,12 @@ using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using SocialMedia.Data;
+using SocialMedia.Models;
 
 namespace SocialMedia.Data
 {
@@ -34,6 +37,8 @@ namespace SocialMedia.Data
         }
 
         public DbSet<Post> Post { get; set; }
+        public DbSet<Comment> Comment { get; set; }
+        public DbSet<Like> Like { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

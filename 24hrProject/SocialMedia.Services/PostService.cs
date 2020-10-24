@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SocialMedia.Data;
+using SocialMedia.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,28 +22,28 @@ namespace SocialMedia.Services
                 {
                     AuthorId = _userId,
                     Title = model.Title,
-                    Content = model.Content,
+                    Text = model.Text,
                     CreatedUtc = DateTimeOffset.Now
                 };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Posts.Add(entity);
+                ctx.Post.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<PostListItem> GetPosts()
+        public IEnumerable<PostList> GetPosts()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .Posts
+                        .Post
                         .Where(e => e.AuthorId == _userId)
                         .Select(
                             e =>
-                                new PostListItem
+                                new PostList
                                 {
                                     PostId = e.PostId,
                                     Title = e.Title,
@@ -60,14 +62,14 @@ namespace SocialMedia.Services
             {
                 var entity =
                     ctx
-                        .Posts
+                        .Post
                         .Single(e => e.PostId == id && e.AuthorId == _userId);
                 return
                     new PostDetail
                     {
                         PostId = entity.PostId,
                         Title = entity.Title,
-                        Content = entity.Content,
+                        Text = entity.Text,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
@@ -80,11 +82,11 @@ namespace SocialMedia.Services
             {
                 var entity =
                     ctx
-                        .Posts
+                        .Post
                         .Single(e => e.PostId == model.PostId && e.AuthorId == _userId);
 
                 entity.Title = model.Title;
-                entity.Content = model.Content;
+                entity.Text = model.Text;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
@@ -98,10 +100,10 @@ namespace SocialMedia.Services
             {
                 var entity =
                     ctx
-                        .Posts
+                        .Post
                         .Single(e => e.PostId == PostId && e.AuthorId == _userId);
 
-                ctx.Posts.Remove(entity);
+                ctx.Post.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

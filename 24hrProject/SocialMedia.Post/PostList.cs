@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SocialMedia.Post
+namespace SocialMedia.Models
+
 {
     public class PostList
     {
@@ -16,4 +17,4 @@ namespace SocialMedia.Post
         public DateTimeOffset CreatedUtc { get; set; }
     }
 }
-}
+
