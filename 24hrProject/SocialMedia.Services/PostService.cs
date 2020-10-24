@@ -15,7 +15,7 @@ namespace SocialMedia.Services
         {
             _userId = userId;
         }
-        public bool CreatePost(PostCreate model)
+        public bool CreatePost(CreatePost model)
         {
             var entity =
                 new Post()
@@ -33,7 +33,7 @@ namespace SocialMedia.Services
             }
         }
 
-        public IEnumerable<PostList> GetPosts()
+        public IEnumerable<PostList> GetPost()
         {
             using (var ctx = new ApplicationDbContext())
             {

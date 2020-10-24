@@ -9,7 +9,12 @@ using System.Threading.Tasks;
 namespace SocialMedia.Services
 {
     public class LikeService
+
     {
+        private readonly int _LikeId = -1;
+        public LikeService()
+        {
+        }
         public bool CreateLike(LikeCreate model)
         {
             var entity =
