@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using SocialMedia.Data;
-using SocialMedia.Post;
+using SocialMedia.Models;
 
 namespace SocialMedia.Data
 {
@@ -38,6 +38,7 @@ namespace SocialMedia.Data
 
         public DbSet<Post> Post { get; set; }
         public DbSet<Comment> Comment { get; set; }
+        public DbSet<Like> Like { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

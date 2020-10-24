@@ -1,0 +1,2 @@
+C:\Users\britt\source\repos\teamGit\24hrProject\24hrProject\obj\Debug\24hrProject.csprojAssemblyReference.cache
+C:\Users\britt\source\repos\teamGit\24hrProject\24hrProject\obj\Debug\24hrProject.csproj.CoreCompileInputs.cache

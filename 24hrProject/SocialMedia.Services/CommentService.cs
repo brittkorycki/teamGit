@@ -12,10 +12,9 @@ namespace SocialMedia.Services
     public class CommentService
     //Controller- all methods needed for comments
     {
-        private readonly int _commentId;
-        public CommentService(int commentId)
-        {
-            _commentId = commentId;
+        private readonly int _commentId = -1;
+        public CommentService()
+        { 
         }
         public bool CreateComment(CommentCreate model)
         {

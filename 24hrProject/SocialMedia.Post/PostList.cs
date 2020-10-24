@@ -17,4 +17,4 @@ namespace SocialMedia.Models
         public DateTimeOffset CreatedUtc { get; set; }
     }
 }
-}
+

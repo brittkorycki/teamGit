@@ -17,39 +17,38 @@ namespace _24hrProject.Controllers
         //creates Comment service
         private CommentService CreateCommentService()
         {
-            var userID = Guid.Parse(User.Identity.GetUserId());
-            var PostService = new PostService(userID);
+            var CommentService = new CommentService();
             return CommentService;
         }
 
         //gets all Comments
-        public IHttpActionResult Get()
-            {
+        public IHttpActionResult GetPostComments()
+        {
                 CommentService CommentService = CreateCommentService();
                 var Comments = CommentService.GetComment();
                 return Ok(Comments);
-            }
+        }
             //create comment
-            public IHttpActionResult Post(CommentCreate Post)
-            {
+        public IHttpActionResult PostComment(CommentCreate Comment)
+        {
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
                 var service = CreateCommentService();
                 if (!service.CreateComment(Comment))
                     return InternalServerError();
                 return Ok();
-            }
+        }
 
             //get by ID
-            public IHttpActionResult Get(int id)
-            {
+         public IHttpActionResult Get(int id)
+         {
                 CommentService CommentService = CreateCommentService();
             var Comment = CommentService.GetCommentById(id);
                 return Ok(Comment);
-            }
+         }
             //update by ID
-            public IHttpActionResult Put(CommentEdit Comment)
-            {
+         public IHttpActionResult UpdateComment(CommentEdit Comment)
+         {
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
@@ -59,18 +58,18 @@ namespace _24hrProject.Controllers
                     return InternalServerError();
 
                 return Ok();
-            }
+         }
             //delete 
-            public IHttpActionResult Delete(int id)
-            {
+         public IHttpActionResult DeleteComment(int id)
+         {
                 var service = CreateCommentService();
 
                 if (!service.DeleteComment(id))
                     return InternalServerError();
 
                 return Ok();
-            }
-        }
+         }
+        
     }
 }
 

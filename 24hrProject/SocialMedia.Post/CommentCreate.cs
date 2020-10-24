@@ -16,3 +16,4 @@ namespace SocialMedia.Models
         public User Author { get; set; }
 
     }
+}
