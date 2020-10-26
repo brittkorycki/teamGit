@@ -1,4 +1,6 @@
-﻿using SocialMedia.Services;
+﻿using Microsoft.AspNet.Identity;
+using SocialMedia.Models;
+using SocialMedia.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Web.Http;
 
 namespace _24hrProject.Controllers
 {
-    [Authorize]
+    [RoutePrefix ("api/post")]
     public class PostController : ApiController
     {
         //creates Post service
@@ -20,14 +22,14 @@ namespace _24hrProject.Controllers
             return PostService;
         }
         //gets all Posts
-        public IHttpActionResult Get()
+        public IHttpActionResult GetPosts()
         {
             PostService PostService = CreatePostService();
             var Posts = PostService.GetPost();
             return Ok(Posts);
         }
         //create post
-        public IHttpActionResult Post(PostCreate Post)
+        public IHttpActionResult Post(CreatePost Post)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

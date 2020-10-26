@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace SocialMedia.Models
 {
-    public class Like
+    public class ReplyList : CommentList
     {
         [Key]
-        public int LikeID { get; set; }
-        public Post LikedPost { get; set; }
-        public Post LikedUser { get; set; }
+        public int ReplyId { get; set; }
+        public Comment ReplyComment { get; set; }
     }
 }

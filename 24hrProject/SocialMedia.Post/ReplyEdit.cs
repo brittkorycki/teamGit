@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace SocialMedia.Models
 {
-    public class LikeCreate
+    public class ReplyEdit : CommentEdit
     {
-        public Post LikedPost { get; set; }
-        public User Liker { get; set; }
-        public Post LikedUser { get; set; }
+        public Comment ReplyComment { get; set; }
     }
 }
