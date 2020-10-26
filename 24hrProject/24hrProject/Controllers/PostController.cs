@@ -11,7 +11,7 @@ using System.Web.Http;
 
 namespace _24hrProject.Controllers
 {
-    [Authorize]
+    [RoutePrefix ("api/post")]
     public class PostController : ApiController
     {
         //creates Post service

@@ -20,6 +20,7 @@ namespace SocialMedia.Services
                 new Like()
                 {
                     LikedUser = model.LikedUser,
+                    Liker = model.Liker,
                 };
             using (var ctx = new ApplicationDbContext())
             {
